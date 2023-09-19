@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
+import Home from "./components/Home";
+import Login from "./components/Login";
 
 function App() {
-  return <div className="App"></div>;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  return <div className="App">{isLoggedIn ? <Home /> : <Login />}</div>;
 }
 
 export default App;
